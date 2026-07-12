@@ -61,7 +61,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3 mt-5">
               <a
-                href="https://github.com"
+                href="https://github.com/Himanshu-kroy/FinPilot-AI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-9 h-9 rounded-lg border border-[rgba(255,255,255,0.10)] text-text-secondary hover:text-white hover:border-[rgba(255,255,255,0.20)] transition-all duration-150"

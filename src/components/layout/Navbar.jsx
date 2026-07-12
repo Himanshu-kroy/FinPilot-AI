@@ -76,7 +76,7 @@ export default function Navbar() {
             ))}
             <li>
               <a
-                href="https://github.com"
+                href="https://github.com/Himanshu-kroy/FinPilot-AI"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-3.5 py-2 text-sm text-text-secondary hover:text-white transition-colors duration-150 rounded-lg hover:bg-[rgba(255,255,255,0.04)] inline-flex items-center gap-1.5"
@@ -134,7 +134,7 @@ export default function Navbar() {
               ))}
               <li>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Himanshu-kroy/FinPilot-AI"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-3 py-3 text-sm text-text-secondary hover:text-white transition-colors rounded-lg hover:bg-[rgba(255,255,255,0.04)]"
