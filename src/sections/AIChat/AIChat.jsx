@@ -1,35 +1,9 @@
 import { motion } from "framer-motion";
-import { Bot, Sparkles, ClipboardList, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Bot, Sparkles, CheckCircle2, Info } from "lucide-react";
 import Section, { Container, SectionLabel } from "@/components/ui/Section";
-import Button from "@/components/ui/Button";
 import Badge from "@/components/ui/Badge";
 import WatsonChat from "@/components/watson/WatsonChat";
 import { useFinancial } from "@/context/FinancialContext";
-
-/* ── Pre-assessment state ─────────────────────────────────── */
-function PreAssessmentPrompt() {
-  const scrollToAssessment = () =>
-    document.querySelector("#assessment")?.scrollIntoView({ behavior: "smooth" });
-
-  return (
-    <div className="flex flex-col items-center justify-center py-16 text-center px-6">
-      <span className="flex items-center justify-center w-14 h-14 rounded-2xl bg-[rgba(15,98,254,0.10)] border border-[rgba(15,98,254,0.20)] mb-5">
-        <ClipboardList size={24} className="text-ibm-blue-light" />
-      </span>
-      <h3 className="text-base font-semibold text-white mb-2">
-        Complete your assessment first
-      </h3>
-      <p className="text-sm text-text-secondary max-w-sm leading-relaxed mb-6">
-        Your financial summary will appear here once you complete the assessment above.
-        The AI advisor will use your data to provide personalized guidance.
-      </p>
-      <Button size="sm" onClick={scrollToAssessment} className="group">
-        Start Assessment
-        <ArrowRight size={13} className="transition-transform duration-200 group-hover:translate-x-0.5" />
-      </Button>
-    </div>
-  );
-}
 
 /* ── Financial summary card ───────────────────────────────── */
 function FinancialSummaryCard({ results }) {
@@ -128,17 +102,22 @@ export default function AIChat() {
               </span>
             </div>
 
-            {/* Financial summary (shown only after assessment) */}
+            {/* Financial summary — shown only after assessment */}
             {results && <FinancialSummaryCard results={results} />}
 
-            {/* Pre-assessment prompt or Watson embed */}
-            {results ? (
-              <div className="px-5 pb-5">
-                <WatsonChat />
-              </div>
-            ) : (
-              <PreAssessmentPrompt />
-            )}
+            {/* Watson embed — always rendered */}
+            <div className="px-5 pb-5">
+              {/* Informational nudge — shown only before assessment */}
+              {!results && (
+                <div className="flex items-start gap-2.5 mb-4 px-3 py-2.5 rounded-xl bg-[rgba(15,98,254,0.06)] border border-[rgba(15,98,254,0.14)]">
+                  <Info size={13} className="text-ibm-blue-light shrink-0 mt-0.5" />
+                  <p className="text-xs text-text-secondary leading-relaxed">
+                    Complete your financial assessment to receive personalized recommendations.
+                  </p>
+                </div>
+              )}
+              <WatsonChat />
+            </div>
           </div>
 
           {/* Watson notice */}
@@ -148,7 +127,7 @@ export default function AIChat() {
               The live AI advisor is powered by IBM Watson Orchestrate.
               {results
                 ? " Your assessment summary is displayed above — share it with the agent to begin a personalized conversation."
-                : " Complete the financial assessment above to activate your personalized AI coaching session."}
+                : " Your financial assessment data will enhance the quality of AI recommendations."}
             </p>
           </div>
         </motion.div>
