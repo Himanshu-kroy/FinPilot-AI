@@ -135,4 +135,4 @@ IBM SkillsBuild AI Internship Project
 
 ## 📄 License
 
-This project is intended for educational purposes as part of the IBM SkillsBuild Internship.
+This project is intended for educational purposes as part of the Edunet IBM SkillsBuild Internship.
