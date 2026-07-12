@@ -7,6 +7,7 @@
 ![Vite](https://img.shields.io/badge/Vite-Frontend-purple)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+video link of demo - https://youtu.be/CREVHOZqnMg
 ---
 
 ## 📖 Overview
