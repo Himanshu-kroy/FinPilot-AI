@@ -112,22 +112,6 @@ npm run build
 
 ---
 
-## 📸 Screenshots
-
-### Home Page
-
-*(Add screenshot here)*
-
-### Financial Assessment
-
-*(Add screenshot here)*
-
-### AI Chat
-
-*(Add screenshot here)*
-
----
-
 ## 🎯 Future Improvements
 
 - User Authentication
