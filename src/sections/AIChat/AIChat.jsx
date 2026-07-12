@@ -314,8 +314,8 @@ export default function AIChat() {
               {/* Financial summary — after assessment */}
               {results && <FinancialSummaryCard results={results} />}
 
-              {/* Watson embed — always rendered, min-height makes it the centrepiece */}
-              <div className="min-h-[600px] lg:min-h-[700px]">
+              {/* Watson embed — always rendered; height is controlled by the wxO widget */}
+              <div className="w-full">
                 <WatsonChat />
               </div>
             </div>
