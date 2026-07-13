@@ -111,23 +111,6 @@ npm run build
 3. IBM watsonx Orchestrate Agent provides personalized guidance.
 4. Users receive budgeting, savings and financial wellness recommendations.
 
----
-
-## 📸 Screenshots
-
-### Home Page
-
-*(Add screenshot here)*
-
-### Financial Assessment
-
-*(Add screenshot here)*
-
-### AI Chat
-
-*(Add screenshot here)*
-
----
 
 ## 🎯 Future Improvements
 
